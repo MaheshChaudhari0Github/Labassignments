@@ -1,0 +1,77 @@
+mysql> Create database Companies;
+Query OK, 1 row affected (0.06 sec)
+
+mysql> use Companies;
+Database changed
+
+mysql> Create table Company(C_Id int primary key Not null,C_Name varchar(20),C_City varchar(30));
+Query OK, 0 rows affected (0.54 sec)
+
+mysql> insert into Company values(1,"Tata","Pune");
+Query OK, 1 row affected (0.14 sec)
+
+mysql> insert into Company values(2,"Dominos","Los Angles");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Company values(3,"PizzaHut","San Francisco");
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into Company values(4,"Ah Pizza","San Deigo");
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into Company values(5,"Nino Pizza","Las Vegas");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from Company;
++------+------------+---------------+
+| C_Id | C_Name     | C_City        |
++------+------------+---------------+
+|    1 | Tata       | Pune          |
+|    2 | Dominos    | Los Angles    |
+|    3 | PizzaHut   | San Francisco |
+|    4 | Ah Pizza   | San Deigo     |
+|    5 | Nino Pizza | Las Vegas     |
++------+------------+---------------+
+5 rows in set (0.00 sec)
+
+mysql> create table item(I_Id int primary key,I_Name varchar(30),Unit_Sold int,C_Id int,foreign key (C_Id)references Company(C_Id));
+Query OK, 0 rows affected (0.90 sec)
+
+mysql> insert into item values(101,"Medium Pizza",8,4);
+Query OK, 1 row affected (0.14 sec)
+
+mysql> insert into item values(102,"Garlic Pizza",4,2);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into item values(103,"Chees Pizza",5,1);
+Query OK, 1 row affected (0.12 sec)
+
+mysql> insert into item values(104,"Small Pizza",9,5);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into item values(105,"Large Pizza",10,3);
+Query OK, 1 row affected (0.11 sec)
+
+mysql> Select * from item;
++------+--------------+-----------+------+
+| I_Id | I_Name       | Unit_Sold | C_Id |
++------+--------------+-----------+------+
+|  101 | Medium Pizza |         8 |    4 |
+|  102 | Garlic Pizza |         4 |    2 |
+|  103 | Chees Pizza  |         5 |    1 |
+|  104 | Small Pizza  |         9 |    5 |
+|  105 | Large Pizza  |        10 |    3 |
++------+--------------+-----------+------+
+5 rows in set (0.00 sec)
+
+mysql> Select C_Name,C_City,I.I_Name,I.Unit_Sold from Company as C left join item as I on C.C_Id=I.C_Id;
++------------+---------------+--------------+-----------+
+| C_Name     | C_City        | I_Name       | Unit_Sold |
++------------+---------------+--------------+-----------+
+| Tata       | Pune          | Chees Pizza  |         5 |
+| Dominos    | Los Angles    | Garlic Pizza |         4 |
+| PizzaHut   | San Francisco | Large Pizza  |        10 |
+| Ah Pizza   | San Deigo     | Medium Pizza |         8 |
+| Nino Pizza | Las Vegas     | Small Pizza  |         9 |
++------------+---------------+--------------+-----------+
+5 rows in set (0.00 sec)

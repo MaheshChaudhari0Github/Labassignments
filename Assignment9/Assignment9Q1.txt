@@ -1,0 +1,186 @@
+mysql> create database Students;
+Query OK, 1 row affected (0.15 sec)
+
+mysql> use Students;
+Database changed
+
+create table Parents(P_Id int primary key not null,P_Name varchar(20),City varchar(20),Age int,Annual_Income int,Occupation varchar(20),Email_Id varchar(20));
+Query OK, 0 rows affected (0.40 sec)
+
+mysql> insert into Parents values(1,"Shamlal singh","Pune",34,50000,"Farmer","shamlal001@gmail.com");
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into Parents values(2,"Randip Kumar","Maval",14,40000,"HouseKepper","Kumar123@gmail.com");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into Parents values(3,"Shantaram Mehta","Kamshet",54,34000,"BussinesMan","Mehta3@gmail.com");
+Query OK, 1 row affected (0.26 sec)
+
+mysql> insert into Parents values(4,"Radhesham Doke","Pimpri",52,700000,"ServiceMan","Doke45@gmail.com");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into Parents values(5,"Shivram Randive","Chinchwad",35,300000,"FireFighter","Shivram682@gmail.com");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into Parents values(6,"Prathmesh Rajput","Bhosari",41,39000,"Fiter","Rajput24@gmail.com");
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into Parents values(7,"Akshay Jadhav","Talimbad",39,750000,"Enginner","Jadhav45@gmail.com");
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into Parents values(8,"Sham Kore","Telagoan",35,58000,"Manager","Kore445@gmail.com");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into Parents values(9,"Bhavesh Choudhray","Yashwanti",31,30000,"Planter","Choudhary1@gmail.com");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into Parents values(10,"Indrajeet Gandhiv","Hitesh Jadhav",34,45000,"Driver","Jadhav65@gmail.com");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into Parents values(11,"Omkar Bhualre","Ravet",42,37000,"Bomb Planter","Bhulare@gmail.com");
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into Parents values(12,"Aditya Chavan","Kudalwadi",32,47000,"Site Engineer","Chavan34@gmail.com");
+Query OK, 1 row affected (0.25 sec)
+
+mysql> insert into Parents values(13,"Punam Chavan","Ahmedabad",43,53000,"Software Engineer","Punam44@gmail.com");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into Parents values(14,"Suraj Gaikwad","Mumbai",34,56000,"Civil Engineer","Gaikwad56@gmail.com");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into Parents values(15,"Rupesh Kalu","Delhi",56,46000,"Software Engineer","Kalu876@gmail.com");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into Parents values(16,"Aila Bhat","Chennai",52,800000,"Electrical Engineer","Bhat236@gmail.com");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into Parents values(17,"Varun Dhavan","Banglore",38,46000,"Python Engineer","Dhavan565@gmail.com");
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into Parents values(18,"Krishna Yadav","Karnatak",45,57000,"Gardner","Yadav5@gmail.com");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into Parents values(19,"Mahavir Kadam","Solapur",40,32000,"Agricultural Head","Kadam65@gmail.com");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Parents values(20,"Laxman Surya","Dwarka",47,59000,"CEO","Surya565@gmail.com");
+Query OK, 1 row affected (0.09 sec)
+
+mysql> Select * from Parents;
++------+-------------------+---------------+------+---------------+---------------------+----------------------+
+| P_Id | P_Name            | City          | Age  | Annual_Income | Occupation          | Email_Id             |
++------+-------------------+---------------+------+---------------+---------------------+----------------------+
+|    1 | Shamlal singh     | Pune          |   34 |         50000 | Farmer              | shamlal001@gmail.com |
+|    2 | Randip Kumar      | Maval         |   14 |         40000 | HouseKepper         | Kumar123@gmail.com   |
+|    3 | Shantaram Mehta   | Kamshet       |   54 |         34000 | BussinesMan         | Mehta3@gmail.com     |
+|    4 | Radhesham Doke    | Pimpri        |   52 |        700000 | ServiceMan          | Doke45@gmail.com     |
+|    5 | Shivram Randive   | Chinchwad     |   35 |        300000 | FireFighter         | Shivram682@gmail.com |
+|    6 | Prathmesh Rajput  | Bhosari       |   41 |         39000 | Fiter               | Rajput24@gmail.com   |
+|    7 | Akshay Jadhav     | Talimbad      |   39 |        750000 | Enginner            | Jadhav45@gmail.com   |
+|    8 | Sham Kore         | Telagoan      |   35 |         58000 | Manager             | Kore445@gmail.com    |
+|    9 | Bhavesh Choudhray | Yashwanti     |   31 |         30000 | Planter             | Choudhary1@gmail.com |
+|   10 | Indrajeet Gandhiv | Hitesh Jadhav |   34 |         45000 | Driver              | Jadhav65@gmail.com   |
+|   11 | Omkar Bhualre     | Ravet         |   42 |         37000 | Bomb Planter        | Bhulare@gmail.com    |
+|   12 | Aditya Chavan     | Kudalwadi     |   32 |         47000 | Site Engineer       | Chavan34@gmail.com   |
+|   13 | Punam Chavan      | Ahmedabad     |   43 |         53000 | Software Engineer   | Punam44@gmail.com    |
+|   14 | Suraj Gaikwad     | Mumbai        |   34 |         56000 | Civil Engineer      | Gaikwad56@gmail.com  |
+|   15 | Rupesh Kalu       | Delhi         |   56 |         46000 | Software Engineer   | Kalu876@gmail.com    |
+|   16 | Aila Bhat         | Chennai       |   52 |        800000 | Electrical Engineer | Bhat236@gmail.com    |
+|   17 | Varun Dhavan      | Banglore      |   38 |         46000 | Python Engineer     | Dhavan565@gmail.com  |
+|   18 | Krishna Yadav     | Karnatak      |   45 |         57000 | Gardner             | Yadav5@gmail.com     |
+|   19 | Mahavir Kadam     | Solapur       |   40 |         32000 | Agricultural Head   | Kadam65@gmail.com    |
+|   20 | Laxman Surya      | Dwarka        |   47 |         59000 | CEO                 | Surya565@gmail.com   |
++------+-------------------+---------------+------+---------------+---------------------+----------------------+
+20 rows in set (0.00 sec)
+
+mysql> Update Parents Set Email_id="NA";
+Query OK, 20 rows affected (0.06 sec)
+Rows matched: 20  Changed: 20  Warnings: 0
+
+mysql> Select * from Parents;
++------+-------------------+---------------+------+---------------+---------------------+----------+
+| P_Id | P_Name            | City          | Age  | Annual_Income | Occupation          | Email_Id |
++------+-------------------+---------------+------+---------------+---------------------+----------+
+|    1 | Shamlal singh     | Pune          |   34 |         50000 | Farmer              | NA       |
+|    2 | Randip Kumar      | Maval         |   14 |         40000 | HouseKepper         | NA       |
+|    3 | Shantaram Mehta   | Kamshet       |   54 |         34000 | BussinesMan         | NA       |
+|    4 | Radhesham Doke    | Pimpri        |   52 |        700000 | ServiceMan          | NA       |
+|    5 | Shivram Randive   | Chinchwad     |   35 |        300000 | FireFighter         | NA       |
+|    6 | Prathmesh Rajput  | Bhosari       |   41 |         39000 | Fiter               | NA       |
+|    7 | Akshay Jadhav     | Talimbad      |   39 |        750000 | Enginner            | NA       |
+|    8 | Sham Kore         | Telagoan      |   35 |         58000 | Manager             | NA       |
+|    9 | Bhavesh Choudhray | Yashwanti     |   31 |         30000 | Planter             | NA       |
+|   10 | Indrajeet Gandhiv | Hitesh Jadhav |   34 |         45000 | Driver              | NA       |
+|   11 | Omkar Bhualre     | Ravet         |   42 |         37000 | Bomb Planter        | NA       |
+|   12 | Aditya Chavan     | Kudalwadi     |   32 |         47000 | Site Engineer       | NA       |
+|   13 | Punam Chavan      | Ahmedabad     |   43 |         53000 | Software Engineer   | NA       |
+|   14 | Suraj Gaikwad     | Mumbai        |   34 |         56000 | Civil Engineer      | NA       |
+|   15 | Rupesh Kalu       | Delhi         |   56 |         46000 | Software Engineer   | NA       |
+|   16 | Aila Bhat         | Chennai       |   52 |        800000 | Electrical Engineer | NA       |
+|   17 | Varun Dhavan      | Banglore      |   38 |         46000 | Python Engineer     | NA       |
+|   18 | Krishna Yadav     | Karnatak      |   45 |         57000 | Gardner             | NA       |
+|   19 | Mahavir Kadam     | Solapur       |   40 |         32000 | Agricultural Head   | NA       |
+|   20 | Laxman Surya      | Dwarka        |   47 |         59000 | CEO                 | NA       |
++------+-------------------+---------------+------+---------------+---------------------+----------+
+20 rows in set (0.00 sec)
+
+mysql> select * from Parents where Annual_Income >600000;
++------+----------------+----------+------+---------------+---------------------+----------+
+| P_Id | P_Name         | City     | Age  | Annual_Income | Occupation          | Email_Id |
++------+----------------+----------+------+---------------+---------------------+----------+
+|    4 | Radhesham Doke | Pimpri   |   52 |        700000 | ServiceMan          | NA       |
+|    7 | Akshay Jadhav  | Talimbad |   39 |        750000 | Enginner            | NA       |
+|   16 | Aila Bhat      | Chennai  |   52 |        800000 | Electrical Engineer | NA       |
++------+----------------+----------+------+---------------+---------------------+----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from Parents Where City ="Ahmedabad"OR City = "Delhi" OR City="Mumbai" OR City = "Chennai" OR City="Banglore";
++------+---------------+-----------+------+---------------+---------------------+----------+
+| P_Id | P_Name        | City      | Age  | Annual_Income | Occupation          | Email_Id |
++------+---------------+-----------+------+---------------+---------------------+----------+
+|   13 | Punam Chavan  | Ahmedabad |   43 |         53000 | Software Engineer   | NA       |
+|   14 | Suraj Gaikwad | Mumbai    |   34 |         56000 | Civil Engineer      | NA       |
+|   15 | Rupesh Kalu   | Delhi     |   56 |         46000 | Software Engineer   | NA       |
+|   16 | Aila Bhat     | Chennai   |   52 |        800000 | Electrical Engineer | NA       |
+|   17 | Varun Dhavan  | Banglore  |   38 |         46000 | Python Engineer     | NA       |
++------+---------------+-----------+------+---------------+---------------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> Select * from Parents where Annual_Income<50000;
++------+-------------------+---------------+------+---------------+-------------------+----------+
+| P_Id | P_Name            | City          | Age  | Annual_Income | Occupation        | Email_Id |
++------+-------------------+---------------+------+---------------+-------------------+----------+
+|    2 | Randip Kumar      | Maval         |   14 |         40000 | HouseKepper       | NA       |
+|    3 | Shantaram Mehta   | Kamshet       |   54 |         34000 | BussinesMan       | NA       |
+|    6 | Prathmesh Rajput  | Bhosari       |   41 |         39000 | Fiter             | NA       |
+|    9 | Bhavesh Choudhray | Yashwanti     |   31 |         30000 | Planter           | NA       |
+|   10 | Indrajeet Gandhiv | Hitesh Jadhav |   34 |         45000 | Driver            | NA       |
+|   11 | Omkar Bhualre     | Ravet         |   42 |         37000 | Bomb Planter      | NA       |
+|   12 | Aditya Chavan     | Kudalwadi     |   32 |         47000 | Site Engineer     | NA       |
+|   15 | Rupesh Kalu       | Delhi         |   56 |         46000 | Software Engineer | NA       |
+|   17 | Varun Dhavan      | Banglore      |   38 |         46000 | Python Engineer   | NA       |
+|   19 | Mahavir Kadam     | Solapur       |   40 |         32000 | Agricultural Head | NA       |
++------+-------------------+---------------+------+---------------+-------------------+----------+
+10 rows in set (0.00 sec)
+
+mysql> select * from Parents Where Age<45;
++------+-------------------+---------------+------+---------------+-------------------+----------+
+| P_Id | P_Name            | City          | Age  | Annual_Income | Occupation        | Email_Id |
++------+-------------------+---------------+------+---------------+-------------------+----------+
+|    1 | Shamlal singh     | Pune          |   34 |         50000 | Farmer            | NA       |
+|    2 | Randip Kumar      | Maval         |   14 |         40000 | HouseKepper       | NA       |
+|    5 | Shivram Randive   | Chinchwad     |   35 |        300000 | FireFighter       | NA       |
+|    6 | Prathmesh Rajput  | Bhosari       |   41 |         39000 | Fiter             | NA       |
+|    7 | Akshay Jadhav     | Talimbad      |   39 |        750000 | Enginner          | NA       |
+|    8 | Sham Kore         | Telagoan      |   35 |         58000 | Manager           | NA       |
+|    9 | Bhavesh Choudhray | Yashwanti     |   31 |         30000 | Planter           | NA       |
+|   10 | Indrajeet Gandhiv | Hitesh Jadhav |   34 |         45000 | Driver            | NA       |
+|   11 | Omkar Bhualre     | Ravet         |   42 |         37000 | Bomb Planter      | NA       |
+|   12 | Aditya Chavan     | Kudalwadi     |   32 |         47000 | Site Engineer     | NA       |
+|   13 | Punam Chavan      | Ahmedabad     |   43 |         53000 | Software Engineer | NA       |
+|   14 | Suraj Gaikwad     | Mumbai        |   34 |         56000 | Civil Engineer    | NA       |
+|   17 | Varun Dhavan      | Banglore      |   38 |         46000 | Python Engineer   | NA       |
+|   19 | Mahavir Kadam     | Solapur       |   40 |         32000 | Agricultural Head | NA       |
++------+-------------------+---------------+------+---------------+-------------------+----------+
+14 rows in set (0.00 sec)
