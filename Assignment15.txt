@@ -1,0 +1,70 @@
+										Assignment 15
+
+
+<!DOCTYPE html>
+<head>
+    <h1><center>
+    Time Table
+        </center>
+    </h1>
+</head>
+    <body>
+        <table border="3" cellpadding="5" cellspacing="5" align="center">
+            <style>
+                table td
+                {
+                    text-align:center;
+                }
+            </style>
+            <tr>
+                <th rowspan="3"> Day </th>
+                <th colspan="3"> Seminar</th>
+            </tr>
+                <tr>
+                    <th colspan="2"> Schedule </th>
+                    <th rowspan=2> Topic</th>
+                </tr>
+                <tr>
+                    <th> Begin </th>
+                    <th> End</th>
+                </tr>
+
+                    <!--  First Line -->
+                <tr>
+                    <td rowspan="2"> Monday </td>
+                    <td rowspan="2"> 8.00 am </td>
+                    <td rowspan="2"> 5.00 am </td>
+                    <td> Introduction to XML </td>   
+                </tr>
+
+
+                <tr>
+                    <td> Validity: DTD and RTelax NG </td>
+                </tr>
+
+                    <!--  Second Line -->
+                <td rowspan="3"> Tuesday </td>
+                <td> 8.00 am </td>
+                <td> 11.00 am </td>
+                <td rowspan="2"> XPath </td>    
+                </tr>
+
+                <td> 11.00 am </td>
+                <td> 2.00 pm </td>
+                
+                <tr>
+                <td> 2.00 pm </td>
+                <td> 5.00 pm </td>
+                <td> XLS Transformation </td>
+                </tr>
+                
+                    <!--  Third Line -->
+                <tr>
+                <td>  Wednesday </td>
+                <td>  8.00 am </td>
+                <td>  12.00 pm </td>
+                <td>  XLS Formatting  Objects </td>
+                </tr>
+        </table>
+    </body>
+</html>
